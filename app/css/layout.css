@@ -1,0 +1,50 @@
+/* Page layout: header HUD, the three-pane checklist, the roadmap grid and the settings drawer. */
+.topbar {
+  display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 22px;
+  height: 96px; padding: 0 20px; border-bottom: 1px solid var(--line);
+  background: linear-gradient(90deg, rgba(255,79,163,.12), rgba(16,11,34,.6) 45%, rgba(45,226,230,.08));
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.sun {
+  width: 44px; height: 44px; border-radius: 50%; flex: none;
+  background: repeating-linear-gradient(180deg, transparent 0 22px, var(--bg) 22px 25px, transparent 25px 29px), linear-gradient(180deg, var(--pink), var(--orange));
+  box-shadow: 0 0 18px rgba(255, 79, 163, .6);
+}
+.brand h1 {
+  font-size: 23px; letter-spacing: .5px; text-transform: uppercase; font-weight: 900;
+  background: linear-gradient(90deg, #ff8cc6, var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.tagline { margin: 2px 0 0; color: var(--muted); font-size: 12.5px; }
+
+.hud { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; }
+.progress-block { display: grid; gap: 5px; min-width: 0; }
+.big { font-size: 14px; color: var(--muted); display: flex; align-items: baseline; gap: 4px; white-space: nowrap; }
+.big strong { font-size: 25px; color: var(--text); }
+.big .pct { margin-left: 6px; color: var(--orange); font-weight: 800; font-size: 16px; }
+.big .pts { margin-left: 8px; color: var(--teal); font-size: 12.5px; font-weight: 600; }
+.bar.wide { height: 8px; }
+.grade-row { display: flex; flex-wrap: nowrap; gap: 5px; }
+.gchip { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); white-space: nowrap; }
+.tabs { display: flex; align-items: center; gap: 6px; }
+.tab { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 13px; font-weight: 700; }
+.tab.on { background: linear-gradient(90deg, var(--pink), var(--orange)); color: #1a0b1e; border-color: transparent; }
+.spoiler-badge { align-self: center; font-size: 11.5px; padding: 2px 8px; border-radius: 999px; border: 1px dashed var(--violet); color: #d6c9ff; margin-left: 8px; }
+.spoiler-badge.off { border-color: var(--line); color: var(--muted); }
+
+main { height: calc(100vh - 96px); position: relative; }
+.checklist-view {
+  display: grid; grid-template-columns: 214px minmax(0, 1fr) minmax(0, 1.08fr); gap: 14px;
+  height: 100%; padding: 14px 18px;
+}
+.checklist-view > * { min-height: 0; overflow: auto; }
+.roadmap-view {
+  display: grid; grid-template-columns: 262px minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 12px;
+  height: 100%; padding: 14px 18px;
+}
+.roadmap-view > * { min-height: 0; overflow: auto; }
+.drawer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 410px; overflow: auto;
+  padding: 14px 16px; display: grid; align-content: start; gap: 10px;
+  background: rgba(20, 14, 44, .97); border-left: 1px solid var(--pink); box-shadow: -18px 0 40px rgba(0,0,0,.5);
+}
+[hidden] { display: none !important; }

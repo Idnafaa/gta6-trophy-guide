@@ -1,0 +1,6 @@
+[
+  { "file": "1-checklist-guide.jpg", "path": "/", "view": "checklist", "filter": "all", "selected": "Positive Mental Attitude", "earned": 19, "spoilers": "story", "viewport": { "width": 1280, "height": 800 }, "note": "cover: filters, progress HUD, checklist with official names/descriptions/grades, guide with missable flag and sources" },
+  { "file": "2-roadmap-missables.jpg", "path": "/#roadmap", "view": "roadmap", "spoilers": "story", "viewport": { "width": 1280, "height": 800 }, "note": "roadmap to platinum: 3 stages, stage 1 by chapter, missable watch, before-you-start, cited" },
+  { "file": "3-spoilers-export-import.jpg", "path": "/#settings", "view": "settings", "spoilers": "story", "viewport": { "width": 1280, "height": 800 }, "note": "spoiler setting masking story trophies; progress exported then imported back from the file" },
+  { "file": "4-filter-crime.jpg", "path": "/", "view": "checklist", "filter": "crime", "selected": "Maximum Withdrawal", "viewport": { "width": 1280, "height": 800 }, "note": "kind filter at work with a guide open" }
+]
